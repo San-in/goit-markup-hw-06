@@ -448,7 +448,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: calc(528 * 100vw / 1600);
+  padding: 40px;
+
   height: calc(581 * 100vh / 1024);
   background-color: var(--color-white);
 }
@@ -466,6 +467,70 @@ body {
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+}
+.modal-close-btn,
+.form-label-icon {
+  fill: currentColor;
+  transition: color 250ms var(--basic-cubic);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  color: var(--color-accent);
+}
+
+.modal-form-title {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  color: var(--color-bold);
+}
+.modal-form-item {
+}
+.form-field {
+  position: relative;
+}
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 12px 12px 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms var(--basic-cubic);
+  background-color: none;
+}
+.form-input:hover,
+.form-input:focus {
+  border-color: var(--color-accent);
+}
+
+.form-label {
+}
+.form-label-text {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  transition: transform 250ms var(--basic-cubic);
+}
+
+.form-field:focus-within .form-label-text,
+.form-input:not(:placeholder-shown) + .form-label > .form-label-text {
+  transform: translate(-42px, -44px);
+}
+
+.form-label-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  fill: currentColor;
+  transition: color 250ms var(--basic-cubic);
+}
+.form-field:hover .form-label-icon,
+.form-field:focus-within .form-label-icon {
+  color: var(--color-accent);
 }
 
 /* Footer */
@@ -521,7 +586,7 @@ body {
 
 .footer-form-wrap {
   margin-left: auto;
-  /* outline: 1px solid red; */
+  align-self: flex-start;
 }
 .footer-form {
   display: flex;
@@ -544,7 +609,7 @@ body {
   font-size: 16px;
   line-height: calc(20 / 16);
 
-  color: inherit;
+  color: #ffffff;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
