@@ -581,7 +581,7 @@ body {
   color: var(--color-bold);
 }
 .modal-form-item {
-  min-width: 448px;
+  width: 100%;
 
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -596,6 +596,7 @@ body {
 }
 .form-input {
   display: block;
+  height: 40px;
   width: 100%;
   padding: 11px 12px 11px 42px;
 
@@ -603,11 +604,9 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms var(--basic-cubic);
-  background-color: none;
 }
-.form-input:hover,
+
 .form-input:focus,
-.form-label-comment > textarea:hover,
 .form-label-comment > textarea:focus {
   border-color: var(--color-accent);
 }
@@ -633,9 +632,9 @@ body {
 
   fill: currentColor;
   color: var(--color-bold);
-  transition: color 250ms var(--basic-cubic);
+  transition: fill 250ms var(--basic-cubic);
 }
-.form-field:hover .form-label-icon,
+
 .form-field:focus-within .form-label-icon {
   color: var(--color-accent);
 }
@@ -660,7 +659,6 @@ body {
 
   resize: none;
 
-  background-color: none;
   transition: border-color 250ms var(--basic-cubic);
 }
 .form-label-comment > textarea::placeholder {
